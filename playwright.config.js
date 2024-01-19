@@ -44,19 +44,19 @@ module.exports = defineConfig({
     //   },
     // },
 
-    {
-      name: 'firefox',
-      use: {
-        browserName: 'firefox',
-      },
-    },
-
     // {
-    //   name: 'webkit',
+    //   name: 'firefox',
     //   use: {
-    //     browserName: 'webkit',
+    //     browserName: 'firefox',
     //   },
     // },
+
+    {
+      name: 'pw 1.41 webkit',
+      use: {
+        browserName: 'webkit',
+      },
+    },
   ],
 });
 
