@@ -37,19 +37,19 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'chromium',
-    //   use: {
-    //     browserName: 'chromium',
-    //   },
-    // },
-
     {
-      name: 'firefox',
+      name: 'chromium',
       use: {
-        browserName: 'firefox',
+        browserName: 'chromium',
       },
     },
+
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     browserName: 'firefox',
+    //   },
+    // },
 
     // {
     //   name: 'webkit',
