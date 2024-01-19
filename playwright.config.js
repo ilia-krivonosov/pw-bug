@@ -45,7 +45,7 @@ module.exports = defineConfig({
     // },
 
     {
-      name: 'pw 1.31.2 firefox',
+      name: 'pw 1.31.0 firefox',
       use: {
         browserName: 'firefox',
       },
