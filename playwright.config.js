@@ -19,16 +19,17 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 1 : 0,
+  retries: process.env.CI ? 0 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 15 : 1,
+  workers: process.env.CI ? 4 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     video: 'on-first-retry',
+    screenshot: 'only-on-failure',
     connectOptions: {
       wsEndpoint: process.env.WS_ENDPOINT,
     }
@@ -45,7 +46,7 @@ module.exports = defineConfig({
     // },
 
     {
-      name: 'firefox',
+      name: 'pw 1-41 firefox',
       use: {
         browserName: 'firefox',
       },
