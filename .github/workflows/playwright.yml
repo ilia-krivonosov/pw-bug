@@ -11,8 +11,8 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v6
       with:
         node-version: 18
     - name: Install dependencies
@@ -22,7 +22,7 @@ jobs:
     - name: Run Playwright tests
       run: CI=1 npx playwright test
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       if: always()
       with:
         name: playwright-report-${{ github.sha }}
